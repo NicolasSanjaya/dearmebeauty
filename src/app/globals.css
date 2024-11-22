@@ -2,15 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition: all 0.5s;
+}
+
+.custom-dots li {
+  margin: 0 5px;
+}
+
+.custom-dots li button {
+  display: none;
+}
+
+.custom-dots li div {
+  transition: all 0.3s ease;
+}
+
+.custom-dots li.slick-active div {
+  transform: scale(1.2);
+  background: #ff79c8 !important;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #fffaee;
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #fffaee;
   }
 }
 
