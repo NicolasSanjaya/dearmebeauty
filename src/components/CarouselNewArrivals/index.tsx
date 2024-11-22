@@ -1,12 +1,12 @@
 "use client";
-import Slider from "react-slick";
+import Slider, { CustomArrowProps } from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
 
-function NextArrow(props) {
-  const { className, style, onClick } = props;
+function NextArrow(props: CustomArrowProps) {
+  const { style, onClick } = props;
   return (
     <div
       className="bg-pink cursor-pointer absolute -translate-y-[50%] w-[50px] h-[50px] rounded-full -right-6 text-white text-2xl font-bold flex justify-center items-center z-10 top-[50%] hover:opacity-70"
@@ -23,8 +23,8 @@ function NextArrow(props) {
   );
 }
 
-function PrevArrow(props) {
-  const { className, style, onClick } = props;
+function PrevArrow(props: CustomArrowProps) {
+  const { style, onClick } = props;
   return (
     <div
       className="bg-pink cursor-pointer absolute -translate-y-[50%] w-[50px] h-[50px] rounded-full -left-6 text-white text-2xl font-bold flex justify-center items-center z-10 top-[50%] hover:opacity-70"
@@ -48,12 +48,12 @@ function CarouselNewArrivals() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    appendDots: (dots) => (
+    appendDots: (dots: boolean) => (
       <div>
         <ul className="flex justify-center gap-4">{dots}</ul>
       </div>
     ),
-    customPaging: (i) => (
+    customPaging: () => (
       <div className="bg-softpink w-[15px] h-[15px] rounded-full mt-4"></div>
     ),
     dotsClass: "slick-dots custom-dots",
