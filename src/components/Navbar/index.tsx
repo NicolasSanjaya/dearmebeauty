@@ -12,7 +12,7 @@ const Navbar = () => {
   });
   return (
     <div
-      className={`flex justify-between px-12 py-10  z-[999] sticky ${
+      className={`flex justify-between px-12 py-10 top-0 z-[999] sticky ${
         scroll
           ? "bg-pink transition-all duration-500 top-10 w-[60%] mx-auto shadow-md bg-pink-800 rounded-[70px] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-pink-100"
           : "bg-transparent"
