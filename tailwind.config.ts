@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 export default {
   content: [
@@ -15,7 +16,11 @@ export default {
         softwhite: "#FFFAEE",
         pink: "#FF79C8",
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "pink-background": "url('/background.png')",
+      },
     },
   },
-  plugins: [],
+  plugins: [daisyui],
 } satisfies Config;
