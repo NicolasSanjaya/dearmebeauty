@@ -1,5 +1,4 @@
 "use client";
-import Circle from "@/components/Circle";
 import CircleBadge from "@/components/CircleBadge";
 import React, { useState } from "react";
 import { FaLeaf } from "react-icons/fa";
@@ -19,8 +18,7 @@ const Products = () => {
   const [activeMenu, setActiveMenu] = useState("all");
 
   return (
-    <div className="bg-gradient-to-t from-softpink to-softwhite p-12 overflow-hidden">
-      <Circle className="absolute -top-44 -left-12 opacity-30 blur-xl w-[350px] h-[350px]" />
+    <div className="bg-gradient-to-t from-softpink to-softwhite relative p-12 overflow-x-hidden">
       <div className="flex justify-center relative gap-10">
         <CircleBadge title="Natural" logo={<FaLeaf size={32} />} />
         <CircleBadge

@@ -4,6 +4,7 @@ import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Head from "next/head";
+import Circle from "@/components/Circle";
 
 const monserrat = Montserrat({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
       </Head>
       <body className={`${monserrat.className} antialiased overflow-x-hidden`}>
         <Navbar />
+        <Circle className="absolute -top-44 -left-12 opacity-30 blur-xl w-[350px] h-[350px]" />
         {children}
         <Footer />
       </body>
