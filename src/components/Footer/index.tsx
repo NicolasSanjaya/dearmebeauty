@@ -11,15 +11,15 @@ const Footer = () => {
         <div className="flex flex-col gap-2">
           <h4 className="font-bold text-2xl">DearMeBeauty</h4>
           <Link href={"/"} className="flex items-center gap-2">
-            <FaInstagram size={40} color="#FF79C8" />
+            <FaInstagram size={24} color="#FF79C8" />
             @dearmebeauty
           </Link>
           <Link href={"/"} className="flex items-center gap-2">
-            <FaTiktok size={40} color="#FF79C8" />
+            <FaTiktok size={24} color="#FF79C8" />
             @dearmebeauty
           </Link>
           <Link href={"/"} className="flex items-center gap-2">
-            <FaYoutube size={40} color="#FF79C8" />
+            <FaYoutube size={24} color="#FF79C8" />
             dearmebeauty
           </Link>
           <p className="font-semibold text-lg">www.dearmebeauty.com</p>
@@ -44,14 +44,14 @@ const Footer = () => {
             placeholder="Your Message"
             className="border-[1px] border-black rounded-md px-4 py-2 h-32 w-full bg-white"
           ></textarea>
-          <button className="bg-pink text-white px-6 py-2 rounded-md mt-4 font-semibold">
+          <button className="bg-pink text-white px-6 py-2 rounded-md mt-4 font-semibold hover:opacity-50">
             Message
           </button>
         </div>
       </div>
-      <div className="flex flex-col mt-2">
+      <div className="flex flex-col mt-2 text-sm">
         <span className="w-full h-1 bg-black"></span>
-        <p className="p-6">
+        <p className="p-4">
           Copyright @<span className="text-pink">DearMeBeauty</span>
         </p>
       </div>

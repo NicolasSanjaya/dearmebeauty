@@ -13,7 +13,7 @@ export default function Home() {
             Unleash your inner glow, embrace your strength with Dear Me Beauty.
           </h2>
           <p className="text-left">Glow with Us - Get a Special Discount</p>
-          <button className="bg-pink text-white py-5 px-6 rounded-[10px] font-semibold mt-4 shadow-lg">
+          <button className="bg-pink text-white py-5 px-6 rounded-[10px] font-semibold mt-4 shadow-lg hover:opacity-50">
             Browse Product
           </button>
         </div>
@@ -38,7 +38,7 @@ export default function Home() {
             makeup, the brand celebrates individuality while inspiring self-love
             and authenticity.
           </p>
-          <button className="bg-white shadow-lg px-6 py-4 rounded-[16px] mt-4">
+          <button className="bg-white shadow-lg px-6 py-4 rounded-[16px] mt-4 hover:opacity-50">
             Get To Know Us
           </button>
         </div>

@@ -59,7 +59,7 @@ const Profile = () => {
         <div className="flex justify-center items-center mt-6 w-full">
           <ul className="timeline">
             <li>
-              <div className="timeline-start timeline-box flex flex-col text-wrap w-[200px] bg-white">
+              <div className="timeline-start timeline-box flex flex-col text-wrap w-[180px] bg-white">
                 <h4 className="font-bold text-xl">Bold</h4>
                 <p className="mt-2">
                   We inspire boldness and confidence in everyone who uses our
@@ -67,38 +67,20 @@ const Profile = () => {
                 </p>
               </div>
               <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <div className="text-white p-4 rounded-full bg-pink">
+                  <p>B</p>
+                </div>
               </div>
               <hr />
             </li>
             <li>
               <hr />
               <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <div className="text-white p-4 rounded-full bg-pink">
+                  <p>E</p>
+                </div>
               </div>
-              <div className="timeline-end timeline-box flex flex-col text-wrap w-[200px] bg-white">
+              <div className="timeline-end timeline-box flex flex-col text-wrap w-[180px] bg-white">
                 <h4 className="font-bold text-xl">Empowered</h4>
                 <p className="mt-2">
                   Empowering individuals to embrace their true beauty and
@@ -109,7 +91,7 @@ const Profile = () => {
             </li>
             <li>
               <hr />
-              <div className="timeline-start timeline-box flex flex-col text-wrap w-[200px] bg-white">
+              <div className="timeline-start timeline-box flex flex-col text-wrap w-[180px] bg-white">
                 <h4 className="font-bold text-xl">Authentic</h4>
                 <p className="mt-2">
                   Promoting authenticity through honest and high-quality beauty
@@ -117,38 +99,20 @@ const Profile = () => {
                 </p>
               </div>
               <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <div className="text-white p-4 rounded-full bg-pink">
+                  <p>A</p>
+                </div>
               </div>
               <hr />
             </li>
             <li>
               <hr />
               <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <div className="text-white p-4 rounded-full bg-pink">
+                  <p>U</p>
+                </div>
               </div>
-              <div className="timeline-end timeline-box flex flex-col text-wrap w-[200px] bg-white">
+              <div className="timeline-end timeline-box flex flex-col text-wrap w-[180px] bg-white">
                 <h4 className="font-bold text-xl">Unique</h4>
                 <p className="mt-2">
                   Celebrating the uniqueness of every individual with tailored
@@ -160,20 +124,11 @@ const Profile = () => {
             <li>
               <hr />
               <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <div className="text-white p-4 rounded-full bg-pink">
+                  <p>T</p>
+                </div>
               </div>
-              <div className="timeline-start timeline-box flex flex-col text-wrap w-[200px] bg-white">
+              <div className="timeline-start timeline-box flex flex-col text-wrap w-[180px] bg-white">
                 <h4 className="font-bold text-xl">Timeless</h4>
                 <p className="mt-2">
                   Creating timeless products that transcend trends and deliver
@@ -184,7 +139,7 @@ const Profile = () => {
             </li>
             <li>
               <hr />
-              <div className="timeline-end timeline-box flex flex-col text-wrap w-[200px] bg-white">
+              <div className="timeline-end timeline-box flex flex-col text-wrap w-[180px] bg-white">
                 <h4 className="font-bold text-xl">Youtful</h4>
                 <p className="mt-2">
                   Encouraging a youthful spirit and radiant self-expression at
@@ -192,18 +147,9 @@ const Profile = () => {
                 </p>
               </div>
               <div className="timeline-middle">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <div className="text-white p-4 rounded-full bg-pink">
+                  <p>Y</p>
+                </div>
               </div>
             </li>
           </ul>

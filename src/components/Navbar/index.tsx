@@ -16,10 +16,10 @@ const Navbar = () => {
   });
   return (
     <div
-      className={`flex justify-between items-center m-auto px-12 py-10 top-0 z-[999] sticky ${
+      className={`flex justify-between items-center m-auto  top-0 z-[999] sticky ${
         scroll
-          ? "bg-pink transition-all duration-500 top-10 w-[60%] shadow-md bg-pink-800 rounded-[70px] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-pink-100"
-          : "bg-transparent w-full"
+          ? "bg-pink transition-all duration-500 top-10 w-[60%] shadow-md bg-pink-800 rounded-[70px] bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-70 border border-pink-100 px-6 py-6"
+          : "bg-transparent w-full px-10 py-8"
       }`}
     >
       <div>
@@ -73,7 +73,7 @@ const Navbar = () => {
           Blog
         </Link>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center pr-4 items-center hover:scale-110 hover:cursor-pointer hover:opacity-60">
         <FaCartShopping size={32} />
       </div>
     </div>
