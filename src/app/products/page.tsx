@@ -18,7 +18,7 @@ const Products = () => {
   const [activeMenu, setActiveMenu] = useState("all");
 
   return (
-    <div className="bg-gradient-to-t from-softpink to-softwhite relative p-12 overflow-x-hidden">
+    <div className="bg-gradient-to-t from-softpink to-softwhite relative p-12 overflow-hidden">
       <div className="flex justify-center relative gap-10">
         <CircleBadge title="Natural" logo={<FaLeaf size={32} />} />
         <CircleBadge
@@ -94,7 +94,7 @@ const Products = () => {
           </div>
         )}
         {activeMenu === "makeup" && (
-          <div className="flex flex-wrap justify-evenly gap-16">
+          <div className="flex flex-wrap justify-evenly gap-16 overflow-y-hidden">
             <ProductCard />
             <ProductCard />
           </div>

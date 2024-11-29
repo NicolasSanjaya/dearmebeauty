@@ -1,4 +1,5 @@
 import Circle from "@/components/Circle";
+import Image from "next/image";
 import React from "react";
 
 const Profile = () => {
@@ -45,7 +46,14 @@ const Profile = () => {
           <div className="bg-white w-[80px] h-[3px] mb-4"></div>
           <p>Our</p>
           <p className="font-semibold text-lg">Vision</p>
-          <div className="mt-4 bg-slate-600 w-full h-[500px] rounded-md"></div>
+          <div className="mt-4 w-full h-[500px] rounded-md flex justify-center items-center">
+            <Image
+              src={"/profile/vision.png"}
+              width={800}
+              height={800}
+              alt={"Our Vision"}
+            />
+          </div>
         </div>
       </section>
       {/* Section 3 */}
