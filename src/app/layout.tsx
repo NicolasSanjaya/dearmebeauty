@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -24,14 +24,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <Head>
         <link rel="icon" href="/background.png" />
       </Head>
       <body className={`${monserrat.className} antialiased overflow-x-hidden`}>
         <Navbar />
         <Circle className="absolute -top-44 -left-12 opacity-30 blur-xl w-[350px] h-[350px]" />
-        {children}
+        <div className="min-h-screen overflow-auto">{children}</div>
         <Footer />
       </body>
     </html>

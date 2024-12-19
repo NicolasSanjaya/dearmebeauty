@@ -10,19 +10,37 @@ const Footer = () => {
       <div className="grid grid-cols-3 justify-items-center p-12">
         <div className="flex flex-col gap-2">
           <h4 className="font-bold text-2xl">DearMeBeauty</h4>
-          <Link href={"/"} className="flex items-center gap-2">
+          <Link
+            href={"https://www.instagram.com/dearmebeauty/"}
+            target="_blank"
+            className="flex items-center gap-2 font-medium text-lg"
+          >
             <FaInstagram size={24} color="#FF79C8" />
             @dearmebeauty
           </Link>
-          <Link href={"/"} className="flex items-center gap-2">
+          <Link
+            href={"https://www.tiktok.com/@dearmebeauty"}
+            target="_blank"
+            className="flex items-center gap-2 font-medium text-lg"
+          >
             <FaTiktok size={24} color="#FF79C8" />
             @dearmebeauty
           </Link>
-          <Link href={"/"} className="flex items-center gap-2">
+          <Link
+            href={"https://www.youtube.com/@dearmebeauty"}
+            target="_blank"
+            className="flex items-center gap-2 font-medium text-lg"
+          >
             <FaYoutube size={24} color="#FF79C8" />
-            dearmebeauty
+            @dearmebeauty
           </Link>
-          <p className="font-semibold text-lg">www.dearmebeauty.com</p>
+          <Link
+            href={"https://www.dearmebeauty.com/"}
+            target="_blank"
+            className="font-semibold text-lg"
+          >
+            www.dearmebeauty.com
+          </Link>
         </div>
         <div>
           <h3 className="font-semibold text-xl mb-4">Products</h3>

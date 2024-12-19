@@ -4,15 +4,12 @@ import React, { useState } from "react";
 import { FaLeaf } from "react-icons/fa";
 import { FaCreativeCommonsZero } from "react-icons/fa";
 import { IoWaterOutline } from "react-icons/io5";
-// import dynamic from "next/dynamic";
 
 import Countdown from "@/components/CountDown";
 import ProductCard from "@/components/ProductCard";
 import Image from "next/image";
 
-// const Countdown = dynamic(() => import("@/components/CountDown"), {
-//   ssr: false,
-// });
+import { allProducts, makeupProducts, skincareProducts } from "../../data/data";
 
 const Products = () => {
   const [activeMenu, setActiveMenu] = useState("all");
@@ -31,12 +28,55 @@ const Products = () => {
         <Countdown targetDate="2024-12-31T23:59:59" />
         {/* New Product */}
         <div className="mt-6 bg-white transition-all duration-500 mx-auto shadow-md bg-pink-800 rounded-lg p-4 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-50 border border-white-100 relative z-10">
-          <div className="bg-slate-600 w-full h-[300px]"></div>
-          <h3 className="mt-4 text-2xl font-bold">Title</h3>
+          <div className="bg-pink w-full h-[500px] flex overflow-x-scroll gap-4 p-4 rounded-lg">
+            <Image
+              src="/home/newproduct/1.jpg"
+              alt="Image 1"
+              width={500}
+              height={700}
+              className="w-full h-full bg-cover bg-center object-cover"
+            />
+            <Image
+              src="/home/newproduct/2.jpg"
+              alt="Image 2"
+              width={500}
+              height={700}
+              className="w-full h-full bg-cover bg-center object-cover"
+            />
+            <Image
+              src="/home/newproduct/3.jpg"
+              alt="Image 3"
+              width={500}
+              height={700}
+              className="w-full h-full bg-cover bg-center object-cover"
+            />
+            <Image
+              src="/home/newproduct/4.jpg"
+              alt="Image 4"
+              width={500}
+              height={700}
+              className="w-full h-full bg-cover bg-center object-cover"
+            />
+            <Image
+              src="/home/newproduct/5.jpg"
+              alt="Image 5"
+              width={500}
+              height={700}
+              className="w-full h-full bg-cover bg-center object-cover"
+            />
+            <Image
+              src="/home/newproduct/6.jpg"
+              alt="Image 6"
+              width={500}
+              height={700}
+              className="w-full h-full bg-cover bg-center object-cover"
+            />
+          </div>
+          <h3 className="mt-4 text-2xl font-bold">HYPERGLOSS LIP BALM</h3>
           <p className="text-justify mt-2 text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius,
-            consequuntur nam! Doloremque esse facilis nisi laudantium nostrum
-            provident neque iusto.
+            BARU! Hypergloss Lip Balm, pelembap bibir dengan warna yang
+            pigmented untuk solusi bibir sehat dan indah. Memiliki tekstur
+            buttery dengan aroma fruity segar yang nyaman untuk digunakan.
           </p>
         </div>
       </section>
@@ -77,26 +117,47 @@ const Products = () => {
       <section className="mt-12 w-full relative z-10">
         {activeMenu === "all" && (
           <div className="flex flex-wrap justify-evenly gap-16">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {allProducts.map((item, index) => (
+              <ProductCard
+                key={index}
+                category={item.category}
+                name={item.name}
+                price={item.price}
+                discount_price={item.discount_price}
+                image={item.image}
+                url={item.url}
+              />
+            ))}
           </div>
         )}
         {activeMenu === "skincare" && (
           <div className="flex flex-wrap justify-evenly gap-16">
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
-            <ProductCard />
+            {skincareProducts.map((item, index) => (
+              <ProductCard
+                key={index}
+                category={item.category}
+                name={item.name}
+                price={item.price}
+                discount_price={item.discount_price}
+                image={item.image}
+                url={item.url}
+              />
+            ))}
           </div>
         )}
         {activeMenu === "makeup" && (
           <div className="flex flex-wrap justify-evenly gap-16 overflow-y-hidden">
-            <ProductCard />
-            <ProductCard />
+            {makeupProducts.map((item, index) => (
+              <ProductCard
+                key={index}
+                category={item.category}
+                name={item.name}
+                price={item.price}
+                discount_price={item.discount_price}
+                image={item.image}
+                url={item.url}
+              />
+            ))}
           </div>
         )}
       </section>

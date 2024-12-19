@@ -10,10 +10,18 @@ const Navbar = () => {
   const pathname = usePathname();
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 50);
-    });
-  });
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div
       className={`flex justify-between items-center m-auto  top-0 z-[999] sticky ${
@@ -73,7 +81,7 @@ const Navbar = () => {
           Blog
         </Link>
       </div>
-      <div className="flex justify-center pr-4 items-center hover:scale-110 hover:cursor-pointer hover:opacity-60">
+      <div className="flex justify-center pr-4 items-center hover:scale-110 hover:cursor-pointer">
         <FaCartShopping size={32} />
       </div>
     </div>

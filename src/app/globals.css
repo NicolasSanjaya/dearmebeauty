@@ -2,29 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scroll */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f8f6e3;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #7aa2e3;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #008dda;
-}
-
 * {
   transition: all 0.5s;
+  scrollbar-width: auto;
+}
+
+:root {
+  --background: #fffaee;
+  --foreground: #171717;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  scrollbar-width: 8px;
+  scrollbar-color: var(--foreground);
+  scrollbar-track-color: #ff79c8;
+}
+
+/* For WebKit Browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a90e2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #357abd;
 }
 
 .custom-dots li {
@@ -42,15 +55,4 @@
 .custom-dots li.slick-active div {
   transform: scale(1.2);
   background: #ff79c8 !important;
-}
-
-:root {
-  --background: #fffaee;
-  --foreground: #171717;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }

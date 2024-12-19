@@ -15,6 +15,7 @@ export default {
         softpink: "#FFCCEA",
         softwhite: "#FFFAEE",
         pink: "#FF79C8",
+        darkpink: "#FF47B4",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

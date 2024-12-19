@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowBack } from "react-icons/io";
+import Image from "next/image";
 
 function NextArrow(props: CustomArrowProps) {
   const { style, onClick } = props;
@@ -63,32 +64,59 @@ function CarouselNewArrivals() {
   return (
     <div className="slider-container">
       <Slider {...settings}>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>1</h3>
+        <div className="w-full h-[400px] p-4 bg-cover  bg-center bg-pink">
+          <Image
+            src="/home/newproduct/1.jpg"
+            alt="Image 1"
+            width={500}
+            height={700}
+            className="w-full h-full bg-cover bg-center object-cover"
+          />
         </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>2</h3>
+        <div className="w-full h-[400px] p-4 bg-cover bg-center bg-pink">
+          <Image
+            src="/home/newproduct/2.jpg"
+            alt="Image 1"
+            width={500}
+            height={700}
+            className="w-full h-full bg-cover bg-center object-cover"
+          />
         </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>3</h3>
+        <div className="w-full h-[400px] p-4 bg-cover bg-center bg-pink">
+          <Image
+            src="/home/newproduct/3.jpg"
+            alt="Image 1"
+            width={500}
+            height={700}
+            className="w-full h-full bg-cover bg-center object-cover"
+          />
         </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>4</h3>
+        <div className="w-full h-[400px] p-4 bg-cover bg-center bg-pink">
+          <Image
+            src="/home/newproduct/4.jpg"
+            alt="Image 1"
+            width={500}
+            height={700}
+            className="w-full h-full bg-cover bg-center object-cover"
+          />
         </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>5</h3>
+        <div className="w-full h-[400px] p-4 bg-cover bg-center bg-pink">
+          <Image
+            src="/home/newproduct/5.jpg"
+            alt="Image 1"
+            width={500}
+            height={700}
+            className="w-full h-full bg-cover bg-center object-cover"
+          />
         </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>6</h3>
-        </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>7</h3>
-        </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>8</h3>
-        </div>
-        <div className="w-[200px] h-[400px] bg-slate-500">
-          <h3>9</h3>
+        <div className="w-full h-[400px] p-4 bg-cover bg-center bg-pink">
+          <Image
+            src="/home/newproduct/6.jpg"
+            alt="Image 1"
+            width={500}
+            height={700}
+            className="w-full h-full bg-cover bg-center object-cover"
+          />
         </div>
       </Slider>
     </div>
