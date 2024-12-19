@@ -3,17 +3,18 @@ import { allProducts } from "../../../data/data";
 import { FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";
 
-type Props = {
-  params: { url: string };
+type TypeProps = {
+  params: Promise<{ url: string }>;
 };
 
 export async function generateStaticParams() {
   return allProducts.map((product) => ({ slug: product.id }));
 }
 
-export default function ProductDetail({ params }: Props) {
+export default async function ProductDetail({ params }: TypeProps) {
+  const param = await params;
   const product = allProducts.find(
-    (p) => p.url === `/products/${params.url[0]}`
+    (p) => p.url === `/products/${param.url[0]}`
   );
   console.log(product);
 

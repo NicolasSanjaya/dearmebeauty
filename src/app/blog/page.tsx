@@ -7,7 +7,8 @@ import { FaTiktok } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa";
 import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
-import { allProducts as products } from "../../data/data";
+import { skincareProducts as products } from "../../data/data";
+import { BiSolidCarousel } from "react-icons/bi";
 
 const Blog = () => {
   const [activeMenu, setActiveMenu] = useState("article");
@@ -300,8 +301,249 @@ const Blog = () => {
                 </div>
               </div>
             )}
-            {activeMenu === "pressrelease" && <div>Press Release</div>}
-            {activeMenu === "carousel" && <div>Carousel</div>}
+            {activeMenu === "pressrelease" && (
+              <div className="z-10">
+                <div>
+                  {/* Profile */}
+                  {/* <div className="flex items-center gap-2">
+                    <div className="bg-pink rounded-full p-4"></div>
+                    <h5 className="font-semibold text-lg">Dear Me Beauty</h5>
+                    <div className="w-[10px] h-[2px] rounded-md bg-black"></div>
+                    <p>12 Jan 2023</p>
+                  </div> */}
+                  {/* Content */}
+                  <h3 className="font-bold text-2xl mt-4">
+                    Dear Me Beauty Meluncurkan Program “Beauty for Earth” untuk
+                    Kecantikan yang Peduli Lingkungan
+                  </h3>
+                  <Image
+                    src="/pressrelease/pressrelease.jpg"
+                    alt="Press Release Image"
+                    width={500}
+                    height={200}
+                    className="w-full object-cover h-[600px] mt-4"
+                  />
+                  <p className="my-4 text-justify">
+                    <b>[Jakarta, 17 November 2024]</b> – Dear Me Beauty, merek
+                    kecantikan lokal yang dikenal dengan inovasi dan kualitas
+                    produknya, kembali menunjukkan komitmen terhadap
+                    keberlanjutan melalui peluncuran program “Beauty for Earth”.
+                    Program ini menghubungkan dunia kecantikan dengan
+                    pelestarian lingkungan melalui kampanye reboisasi yang
+                    melibatkan pelanggan secara langsung.
+                  </p>
+                  <p className="my-4 text-justify">
+                    Melalui “Beauty for Earth”, Dear Me Beauty berkomitmen untuk
+                    menanam satu pohon untuk setiap pembelian produk edisi
+                    khusus ramah lingkungan. Kampanye ini bertujuan mendukung
+                    konservasi hutan di Indonesia sekaligus menginspirasi
+                    konsumen untuk turut berkontribusi pada pelestarian alam.
+                  </p>
+                  <p className="my-4 text-justify">
+                    “Sebagai brand kecantikan yang peduli dengan keberlanjutan,
+                    kami percaya bahwa kecantikan sejati tidak hanya berasal
+                    dari penampilan luar, tetapi juga dari tindakan nyata untuk
+                    menjaga bumi kita,” ujar Nikita Wiradiputri, CEO Dear Me
+                    Beauty. “Melalui ‘Beauty for Earth’, kami ingin mengajak
+                    semua pelanggan kami menjadi bagian dari gerakan positif
+                    ini.”
+                  </p>
+                  <p className="my-4 text-justify font-bold">
+                    Inisiatif Utama Program “Beauty for Earth”
+                  </p>
+                  <ol className="list-decimal ml-8">
+                    <li className="font-bold">
+                      Produk Edisi Khusus Ramah Lingkungan:
+                    </li>
+                    <p className="text-justify my-4">
+                      Dear Me Beauty meluncurkan koleksi Face Palette dengan
+                      kemasan yang 100% dapat didaur ulang. Koleksi ini
+                      mengusung tema alam, menampilkan desain eksklusif hasil
+                      kolaborasi dengan seniman lokal yang terinspirasi dari
+                      keindahan hutan Indonesia.
+                    </p>
+                    <li className="font-bold">
+                      Penanaman Pohon untuk Setiap Pembelian:
+                    </li>
+                    <p className="text-justify my-4">
+                      Setiap pembelian produk edisi khusus ini akan secara
+                      otomatis mendukung program reboisasi yang dilakukan
+                      bekerja sama dengan Treehome Indonesia. Pelanggan juga
+                      akan menerima sertifikat digital sebagai tanda kontribusi
+                      mereka dalam gerakan ini.
+                    </p>
+                    <li className="font-bold">
+                      Acara Penanaman Pohon Bersama:
+                    </li>
+                    <p className="text-justify my-4">
+                      Dear Me Beauty mengundang pelanggan, komunitas, dan
+                      influencer untuk ikut serta dalam acara penanaman pohon
+                      yang akan diselenggarakan pada 3 Maret 2025, Gunung Lawu,
+                      Magetan, Jawa Timur. Acara ini dirancang untuk mempererat
+                      hubungan antara pelanggan dan alam.
+                    </p>
+                    <li className="font-bold">
+                      Edukasi Digital Tentang Lingkungan :
+                    </li>
+                    <p className="text-justify my-4">
+                      Melalui media sosial dan blog, Dear Me Beauty akan
+                      membagikan konten edukatif tentang pentingnya menjaga
+                      lingkungan, langkah kecil yang dapat dilakukan konsumen,
+                      dan kisah di balik upaya reboisasi ini.
+                    </p>
+                  </ol>
+                  <p className="my-4 font-bold">
+                    Bergabunglah dalam Gerakan Ini!
+                  </p>
+                  <p className="my-4 text-justify">
+                    Dengan program <i>“Beauty for Earth”</i>, Dear Me Beauty
+                    tidak hanya ingin mempercantik para pelanggannya, tetapi
+                    juga planet yang kita cintai bersama. Kami percaya bahwa
+                    setiap langkah kecil dapat berdampak besar bila dilakukan
+                    bersama-sama.
+                  </p>
+                </div>
+              </div>
+            )}
+            {activeMenu === "carousel" && (
+              <div className="grid grid-cols-3 gap-4 mt-8">
+                <Link
+                  href={"https://www.instagram.com/p/DDwJsJkSjED/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel1.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwJ7Y-Sgza/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel2.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwJ93sStR-/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel3.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwKBgRSWqo/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel4.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwKEkMSodg/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel5.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwKHpESYGj/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel6.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwKKoNSZSI/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel7.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwKNSbSJtE/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel8.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DDwKQB7Stwz/?img_index=1"}
+                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute top-6 right-6">
+                    <BiSolidCarousel size={32} color="#fff" />
+                  </div>
+                  <Image
+                    src={"/carousel/carousel9.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+              </div>
+            )}
           </div>
           {/* Sticky Product */}
           <div className="w-[30%] h-full flex flex-col items-center mt-4 sticky top-0">
