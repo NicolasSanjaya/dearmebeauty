@@ -582,7 +582,7 @@ const Blog = () => {
             alt="Footer"
             width={500}
             height={500}
-            className="w-full bg-opacity-60 blur-sm"
+            className="w-full bg-opacity-60"
           />
         </div>
       </section>

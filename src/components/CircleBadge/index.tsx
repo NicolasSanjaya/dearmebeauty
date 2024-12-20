@@ -10,10 +10,12 @@ const CircleBadge = (props: PropTypes) => {
   const { logo = <FaLeaf size={32} />, title = "Title" } = props;
   return (
     <div className="flex justify-center items-center flex-col">
-      <div className="p-6 rounded-full bg-gradient-to-tl from-pink to-softwhite bg-opacity-50 flex justify-center items-center flex-col text-white">
+      <div className="p-2 md:p-6 rounded-full bg-gradient-to-tl from-pink to-softwhite bg-opacity-50 flex justify-center items-center flex-col text-white">
         {logo}
       </div>
-      <h3 className="font-semibold text-2xl mt-2">{title}</h3>
+      <h3 className="font-semibold text-xs text-center md:text-2xl mt-2 whitespace-nowrap">
+        {title}
+      </h3>
     </div>
   );
 };

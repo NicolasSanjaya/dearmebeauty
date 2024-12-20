@@ -7,69 +7,85 @@ import { FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="flex flex-col ">
-      <div className="grid grid-cols-3 justify-items-center p-12">
-        <div className="flex flex-col gap-2">
-          <h4 className="font-bold text-2xl">DearMeBeauty</h4>
+      <div className="grid grid-cols-3 justify-items-center p-6 md:p-12 gap-4 justify-center">
+        <div className="flex flex-col gap-[2px] md:gap-2">
+          <h4 className="font-bold text-[10px] md:text-2xl">DearMeBeauty</h4>
           <Link
             href={"https://www.instagram.com/dearmebeauty/"}
             target="_blank"
-            className="flex items-center gap-2 font-medium text-lg"
+            className="flex items-center gap-1 md:gap-2 font-medium text-[8px] md:text-lg"
           >
-            <FaInstagram size={24} color="#FF79C8" />
+            <FaInstagram
+              size={24}
+              color="#FF79C8"
+              className="w-[12px] md:w-full"
+            />
             @dearmebeauty
           </Link>
           <Link
             href={"https://www.tiktok.com/@dearmebeauty"}
             target="_blank"
-            className="flex items-center gap-2 font-medium text-lg"
+            className="flex items-center gap-1 md:gap-2 font-medium text-[8px] md:text-lg"
           >
-            <FaTiktok size={24} color="#FF79C8" />
+            <FaTiktok
+              size={24}
+              color="#FF79C8"
+              className="w-[12px] md:w-full"
+            />
             @dearmebeauty
           </Link>
           <Link
             href={"https://www.youtube.com/@dearmebeauty"}
             target="_blank"
-            className="flex items-center gap-2 font-medium text-lg"
+            className="flex items-center gap-1 md:gap-2 font-medium text-[8px] md:text-lg"
           >
-            <FaYoutube size={24} color="#FF79C8" />
+            <FaYoutube
+              size={24}
+              color="#FF79C8"
+              className="w-[12px] md:w-full"
+            />
             @dearmebeauty
           </Link>
           <Link
             href={"https://www.dearmebeauty.com/"}
             target="_blank"
-            className="font-semibold text-lg"
+            className="font-semibold text-[8px] md:text-lg"
           >
             www.dearmebeauty.com
           </Link>
         </div>
-        <div>
-          <h3 className="font-semibold text-xl mb-4">Products</h3>
-          <p className="text-lg text-pink">Serum</p>
-          <p className="text-lg text-pink">Lotion</p>
-          <p className="text-lg text-pink">Face Cream</p>
-          <p className="text-lg text-pink">Body Lotion</p>
+        <div className=" md:text-lg">
+          <h3 className="font-semibold text-[10px] md:text-xl mb-2 md:mb-4">
+            Products
+          </h3>
+          <p className="text-[8px] md:text-lg text-pink">Serum</p>
+          <p className="text-[8px] md:text-lg text-pink">Lotion</p>
+          <p className="text-[8px] md:text-lg text-pink">Face Cream</p>
+          <p className="text-[8px] md:text-lg text-pink">Body Lotion</p>
         </div>
         <div>
-          <h3 className="font-semibold text-xl mb-4">Contact Us</h3>
+          <h3 className="font-semibold text-[10px] md:text-xl mb-2 md:mb-4">
+            Contact Us
+          </h3>
           <input
             type="text"
-            className="mb-4 px-4 py-2 border-[1px] border-black rounded-md w-full bg-white"
+            className="mb-4 px-2 py-1 md:px-4 md:py-2 border-[1px] text-[8px] md:text-base border-black rounded-md w-full bg-white"
             placeholder="your.email@example.com"
           />
           <textarea
             name=""
             id=""
             placeholder="Your Message"
-            className="border-[1px] border-black rounded-md px-4 py-2 h-32 w-full bg-white"
+            className="border-[1px] border-black rounded-md px-2 py-1 md:px-4 md:py-2 h-12 md:h-32 w-full bg-white text-[8px] md:text-base"
           ></textarea>
-          <button className="bg-pink text-white px-6 py-2 rounded-md mt-4 font-semibold hover:opacity-50">
+          <button className="bg-pink text-white px-2 py-1 md:px-6 md:py-2 rounded-md mt-2 md:mt-4 text-[8px] md:text-base font-semibold hover:opacity-50">
             Message
           </button>
         </div>
       </div>
       <div className="flex flex-col mt-2 text-sm">
-        <span className="w-full h-1 bg-black"></span>
-        <p className="p-4">
+        <span className="w-full h-[2px] md:h-1 bg-black"></span>
+        <p className="p-[5px] md:p-4 text-[8px] md:text-base">
           Copyright @<span className="text-pink">DearMeBeauty</span>
         </p>
       </div>

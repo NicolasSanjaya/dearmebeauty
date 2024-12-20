@@ -36,15 +36,17 @@ const Countdown = ({ targetDate }: { targetDate: string }) => {
   }
 
   return (
-    <div className="flex space-x-4 text-center relative z-10">
+    <div className="flex space-x-2 md:space-x-4 text-center relative z-10">
       {Object.entries(timeLeft).map(([unit, value]) => (
         <div key={unit} className="flex items-end">
-          <div className="countdown font-bold text-3xl">
+          <div className="countdown font-bold text-[16px] md:text-3xl">
             <span style={{ "--value": value } as React.CSSProperties}>
               {value as number}
             </span>
           </div>
-          <div className="text-md font-medium capitalize">{unit}</div>
+          <div className="text-[10px] md:text-base font-medium capitalize">
+            {unit}
+          </div>
         </div>
       ))}
     </div>

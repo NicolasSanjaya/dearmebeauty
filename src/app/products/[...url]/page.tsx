@@ -27,7 +27,7 @@ export default async function ProductDetail({ params }: TypeProps) {
         <FaArrowLeft size={36} />
       </Link>
       {/* Product Info */}
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center mt-6">
         <section className="w-[50%]">
           <Image
             src={product.image}
