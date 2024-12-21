@@ -170,7 +170,7 @@ const Profile = () => {
           <div className="flex flex-col gap-1 md:gap-2 justify-center items-center">
             <BsBoxFill size={40} className="w-[16px] md:w-full" />
             <h5 className="font-bold text-[10px] md:text-4xl drop-shadow-md">
-              6,500,00
+              6,500,000
             </h5>
             <p className="text-xs text-center md:text-base">
               total products sold
