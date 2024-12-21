@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative ">
+    <div className="relative">
       {/* Section Hero */}
       <Circle className="absolute -top-44 -left-12 -z-1" />
       <section className="relative w-full flex bg-gradient-to-t from-softpink to-softwhite justify-between">
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
       {/* Section Video*/}
       <section className="">
-        <div className="bg-slate-600 w-full h-[200px] md:h-[700px">
+        <div className="bg-slate-600 w-full h-[200px] md:h-[700px]">
           <video
             width="400"
             height="500"

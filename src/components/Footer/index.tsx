@@ -6,12 +6,12 @@ import { FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col gap-4 md:gap-6">
       <div className="grid grid-cols-3 justify-items-center p-6 md:p-12 gap-4 justify-center">
-        <div className="flex flex-col gap-[2px] md:gap-2">
+        <div className="flex flex-col items-start gap-[2px] md:gap-2">
           <h4 className="font-bold text-[10px] md:text-2xl">DearMeBeauty</h4>
           <Link
-            href={"https://www.instagram.com/dearmebeauty/"}
+            href={"https://www.instagram.com/uascreativewriting/"}
             target="_blank"
             className="flex items-center gap-1 md:gap-2 font-medium text-[8px] md:text-lg"
           >
@@ -20,7 +20,7 @@ const Footer = () => {
               color="#FF79C8"
               className="w-[12px] md:w-full"
             />
-            @dearmebeauty
+            @uascreativewriting
           </Link>
           <Link
             href={"https://www.tiktok.com/@dearmebeauty"}
@@ -47,7 +47,7 @@ const Footer = () => {
             @dearmebeauty
           </Link>
           <Link
-            href={"https://www.dearmebeauty.com/"}
+            href={"https://dearmebeauty.vercel.app/"}
             target="_blank"
             className="font-semibold text-[8px] md:text-lg"
           >

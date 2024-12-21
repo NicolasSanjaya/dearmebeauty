@@ -9,6 +9,7 @@ import Link from "next/link";
 import ProductCard from "@/components/ProductCard";
 import { skincareProducts as products } from "../../data/data";
 import { BiSolidCarousel } from "react-icons/bi";
+import { FaVideo } from "react-icons/fa6";
 
 const Blog = () => {
   const [activeMenu, setActiveMenu] = useState("article");
@@ -19,33 +20,35 @@ const Blog = () => {
         <CarouselNewArrivals />
       </section>
       {/* Section 2 */}
-      <section className="mt-24 bg-gradient-to-t from-softpink to-softwhite w-full pt-12 ">
+      <section className="mt-2 md:mt-24 bg-gradient-to-t from-softpink to-softwhite w-full pt-0 md:pt-12 ">
         {/* Menu */}
-        <div className="flex justify-center gap-8 px-12">
+        <div className="flex justify-center gap-2 md:gap-8 px-4 md:px-12">
           <div
-            className={`px-6 py-4 rounded-3xl bg-pink  hover:cursor-pointer hover:bg-opacity-100 ${
+            className={`px-2 py-0 flex justify-center items-center md:px-6 md:py-2 rounded-xl md:rounded-3xl bg-pink  hover:cursor-pointer hover:bg-opacity-100 ${
               activeMenu === "article" ? "bg-opacity-100" : "bg-opacity-70"
             } `}
             onClick={() => setActiveMenu("article")}
           >
             <p
-              className={` font-semibold ${
-                activeMenu === "article" ? "text-white font-bold" : "text-black"
+              className={` font-semibold text-[10px] md:text-base ${
+                activeMenu === "article"
+                  ? "text-white font-bold my-2 md:my-4 text-[10px] md:text-base"
+                  : "text-black"
               }`}
             >
               Article
             </p>
           </div>
           <div
-            className={`px-6 py-4 rounded-3xl bg-pink  hover:cursor-pointer hover:bg-opacity-100 ${
+            className={`px-2 py-0 flex justify-center items-center md:px-6 md:py-2 rounded-xl md:rounded-3xl bg-pink  hover:cursor-pointer hover:bg-opacity-100 ${
               activeMenu === "pressrelease" ? "bg-opacity-100" : "bg-opacity-70"
             } `}
             onClick={() => setActiveMenu("pressrelease")}
           >
             <p
-              className={` font-semibold ${
+              className={` font-semibold text-[10px] md:text-base ${
                 activeMenu === "pressrelease"
-                  ? "text-white font-bold"
+                  ? "text-white font-bold my-2 md:my-4 text-[10px] md:text-base"
                   : "text-black"
               }`}
             >
@@ -53,15 +56,15 @@ const Blog = () => {
             </p>
           </div>
           <div
-            className={`px-6 py-4 rounded-3xl bg-pink  hover:cursor-pointer hover:bg-opacity-100 ${
+            className={`px-2 py-0 flex justify-center items-center md:px-6 md:py-2 rounded-xl md:rounded-3xl bg-pink  hover:cursor-pointer hover:bg-opacity-100 ${
               activeMenu === "carousel" ? "bg-opacity-100" : "bg-opacity-70"
             } `}
             onClick={() => setActiveMenu("carousel")}
           >
             <p
-              className={` font-semibold ${
+              className={` font-semibold text-[10px] md:text-base ${
                 activeMenu === "carousel"
-                  ? "text-white font-bold"
+                  ? "text-white font-bold my-2 md:my-4 text-[10px] md:text-base"
                   : "text-black"
               }`}
             >
@@ -70,22 +73,24 @@ const Blog = () => {
           </div>
         </div>
         {/* Article */}
-        <div className="mt-12 px-12 flex justify-between gap-4">
+        <div className="mt-12 px-6 md:px-12 flex justify-between gap-4">
           {/* Article */}
-          <div className="w-[70%]">
+          <div className="w-full md:w-[70%]">
             {activeMenu === "article" && (
               <div className="z-10">
                 {/* Post 1 */}
                 <div>
                   {/* Profile */}
-                  <div className="flex items-center gap-2">
-                    <div className="bg-pink rounded-full p-4"></div>
-                    <h5 className="font-semibold text-lg">Dear Me Beauty</h5>
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <div className="bg-pink rounded-full p-2 md:p-4"></div>
+                    <h5 className="font-semibold text-[10px] md:text-lg">
+                      Dear Me Beauty
+                    </h5>
                     <div className="w-[10px] h-[2px] rounded-md bg-black"></div>
-                    <p>12 Jan 2023</p>
+                    <p className="text-[10px] md:text-base">12 Jan 2023</p>
                   </div>
                   {/* Content */}
-                  <h3 className="font-bold text-2xl mt-4">
+                  <h3 className="font-bold my-2 md:my-4 text-[10px]  text-xs md:text-2xl mt-4">
                     Cintai Diri: Kunci untuk Merawat Kulit dan Jiwa
                   </h3>
                   <Image
@@ -93,9 +98,9 @@ const Blog = () => {
                     alt="Article 1"
                     width={500}
                     height={200}
-                    className="w-full object-cover h-[600px] mt-4"
+                    className="w-full object-cover h-[200px] md:h-[600px] mt-4"
                   />
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Di tengah kesibukan sehari-hari, merawat diri sering kali
                     menjadi hal yang terabaikan. Padahal, langkah- langkah
                     sederhana untuk menjaga kesehatan kulit dan kebugaran jiwa
@@ -104,43 +109,45 @@ const Blog = () => {
                     fisik, dan emosional. Yuk, kita telusuri bagaimana perawatan
                     diri yang rutin bisa menjadi bentuk cinta diri yang nyata!
                   </p>
-                  <p className="font-bold my-4">
+                  <p className="font-bold my-1 md:my-4 text-[10px] md:text-base">
                     Mengapa Merawat Diri Itu Penting?
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Merawat diri bukan hanya tentang penampilan luar, tetapi
                     juga tentang kesejahteraan batin. Ketika kita memberikan
                     waktu untuk merawat tubuh dan kulit, ada sejumlah manfaat
                     yang bisa dirasakan, seperti:
                   </p>
                   <ul className="list-disc ml-8">
-                    <li className="my-4">
+                    <li className="my-1 md:my-4 text-[10px] md:text-base">
                       <b>Meningkatkan Kesehatan Kulit</b>: Kulit yang sehat
                       adalah hasil dari perhatian rutin terhadap kebersihan dan
                       perlindungan.
                     </li>
-                    <li className="my-4">
+                    <li className="my-1 md:my-4 text-[10px] md:text-base">
                       <b>Mengurangi Stres</b>: Aktivitas sederhana seperti
                       membersihkan wajah atau mengoleskan pelembap dapat
                       memberikan momen relaksasi di tengah hari yang sibuk.
                     </li>
-                    <li className="my-4">
+                    <li className="my-1 md:my-4 text-[10px] md:text-base">
                       <b>Membangun Rasa Percaya Diri</b>: Kulit yang terawat
                       memberi kita rasa nyaman dalam menjalani hari dan
                       menghadapi orang lain.
                     </li>
                   </ul>
-                  <p className="font-bold my-4">
+                  <p className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                     Langkah Perawatan Kulit Sehari-Hari
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Rutinitas perawatan kulit tidak perlu rumit. Berikut adalah
                     langkah-langkah sederhana yang bisa kamu lakukan setiap
                     hari:
                   </p>
                   <ol className="list-decimal ml-8">
-                    <li className="font-bold">Bersihkan Kulitmu</li>
-                    <p className="text-justify my-4">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base ">
+                      Bersihkan Kulitmu
+                    </li>
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Mulailah dengan pembersih yang lembut untuk menghilangkan
                       kotoran dan minyak yang menumpuk sepanjang hari. Langkah
                       ini membantu menjaga pori-pori tetap bersih dan mencegah
@@ -151,8 +158,10 @@ const Blog = () => {
                       Kandungan hyaluronic acid-nya juga memberikan hidrasi
                       ekstra sehingga kulit terasa segar dan lembut.
                     </p>
-                    <li className="font-bold">Hidrasi Kulitmu</li>
-                    <p className="text-justify my-4">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
+                      Hidrasi Kulitmu
+                    </li>
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Setelah membersihkan wajah, jangan lupa menggunakan
                       pelembap. Pelembap tidak hanya memberikan nutrisi pada
                       kulit, tetapi juga membantu mempertahankan kelembapan
@@ -164,8 +173,10 @@ const Blog = () => {
                       lama. Kulitmu akan terasa lebih lembut, kenyal, dan
                       terlindungi dari kekeringan sepanjang hari.
                     </p>
-                    <li className="font-bold">Lindungi Kulitmu</li>
-                    <p className="text-justify my-4">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
+                      Lindungi Kulitmu
+                    </li>
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Paparan sinar matahari bisa merusak kulit jika dibiarkan
                       tanpa perlindungan. Untuk itu, gunakan sunscreen yang
                       tepat. Salah satu pilihan terbaik adalah Skin Barrier
@@ -177,37 +188,39 @@ const Blog = () => {
                       menginginkan perlindungan yang nyaman sepanjang hari.
                     </p>
                   </ol>
-                  <p className="font-bold my-4">
+                  <p className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                     Rayakan Cinta Diri Setiap Hari
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Cinta diri bukan hanya slogan—itu adalah investasi jangka
                     panjang untuk kesehatan mental dan fisik kita. Dengan
                     merawat kulit dan tubuh, kita menunjukkan penghargaan kepada
                     diri sendiri. Jadikan rutinitas ini sebagai momen istimewa
                     untuk terhubung dengan diri sendiri.
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Gunakan produk seperti Skin Barrier Sunscreen{" "}
                     <b>Gel Dear Me Beauty</b> dalam langkah perawatan harianmu
                     untuk memastikan kulit tetap terlindungi dan sehat.
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Dengan langkah kecil ini, mari bersama-sama menjadikan cinta
                     diri sebagai bagian penting dalam hidup kita. ⭐
                   </p>
                 </div>
                 {/* Post 2 */}
-                <div className="mt-20">
+                <div className="mt-8 md:mt-20">
                   {/* Profile */}
-                  <div className="flex items-center gap-2">
-                    <div className="bg-pink rounded-full p-4"></div>
-                    <h5 className="font-semibold text-lg">Dear Me Beauty</h5>
+                  <div className="flex items-center gap-1 md:gap-2">
+                    <div className="bg-pink rounded-full p-2 md:p-4"></div>
+                    <h5 className="font-semibold text-[10px] md:text-lg">
+                      Dear Me Beauty
+                    </h5>
                     <div className="w-[10px] h-[2px] rounded-md bg-black"></div>
-                    <p>28 Jan 2024</p>
+                    <p className="text-[10px] md:text-base">28 Jan 2024</p>
                   </div>
                   {/* Content */}
-                  <h3 className="font-bold text-2xl mt-4">
+                  <h3 className="font-bold my-2 md:my-4 text-[10px]  text-xs md:text-2xl mt-4">
                     Liburan Bebas Khawatir dengan Kulit Terawat!
                   </h3>
                   <Image
@@ -217,7 +230,7 @@ const Blog = () => {
                     height={500}
                     className="w-full mt-4"
                   />
-                  <p className="mt-4 text-justify mb-6">
+                  <p className="mt-4 text-justify mb-6 text-[8px] md:text-base">
                     Liburan merupakan acara yang menyenangkan yang sudah lama
                     dinanti-nantikan untuk melepas penat sejenak dan menciptakan
                     kenangan indah. Namun, tidak jarang saat berlibur dan
@@ -230,8 +243,10 @@ const Blog = () => {
                     sedang liburan!
                   </p>
                   <ol className="list-decimal ml-8">
-                    <li className="font-bold">Sunscreen Itu Wajib!</li>
-                    <p className="text-justify my-4">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
+                      Sunscreen Itu Wajib!
+                    </li>
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Pantai atau Gunung jadi tempat yang kerap kali ingin kita
                       datangi Ketika liburan. Hanya saja Terik matahari Ketika
                       di siang hari menampar kulit kita dengan sinar UV nya yang
@@ -240,7 +255,7 @@ const Blog = () => {
                       kanker kulit. Karena itu, sunscreen adalah perlengkapan
                       wajib yang tidak boleh dilupakan.
                     </p>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Best of the best dari sunscreen ya pastinya{" "}
                       <b>Dear Me Beauty Sunscreen!</b> Produk ini hadir dengan
                       SPF 50, memberikan perlindungan optimal dari sinar UVA dan
@@ -249,14 +264,16 @@ const Blog = () => {
                       mengaplikasikan ulang setiap dua jam, terutama jika kamu
                       banyak berkeringat atau bermain air.
                     </p>
-                    <li className="font-bold">Jangan Lupa Double Cleansing</li>
-                    <p className="text-justify my-4">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
+                      Jangan Lupa Double Cleansing
+                    </li>
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Setelah seharian beraktivitas, kulit membutuhkan
                       pembersihan maksimal untuk mengangkat sisa makeup,
                       kotoran, dan debu yang menempel. Solusi terbaik untuk ini
                       adalah double cleansing!
                     </p>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Langkah ini diawali dengan menggunakan cleansing balm,
                       seperti <b>Dear Me Beauty Cleansing Balm</b>, yang lembut
                       namun efektif menghapus makeup dan kotoran. Produk ini
@@ -265,37 +282,39 @@ const Blog = () => {
                       dengan pembersih wajah berbasis air agar kulit benar-benar
                       bersih dan siap menerima nutrisi dari skincare berikutnya.
                     </p>
-                    <li className="font-bold">Hidrasi adalah Kunci!</li>
-                    <p className="text-justify my-4">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
+                      Hidrasi adalah Kunci!
+                    </li>
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Paparan sinar matahari dan angin selama liburan membuat
                       kulit kita kehilangan kelembaban alaminya. Untuk itu,
                       hidrasi ekstra sangat diperlukan.
                     </p>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Gunakan <b>Dear Me Beauty Serum</b>, yang diformulasikan
                       untuk mengunci kelembaban dan menjaga kulit tetap kenyal
                       serta bercahaya sepanjang hari. Serum ini juga membantu
                       memulihkan kulit dari paparan sinar matahari, memberikan
                       efek menenangkan, dan menghindarkan kulit dari dehidrasi.
                     </p>
-                    <li className="font-bold">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                       Kulit Glowing, Liburan Jadi Menyenangkan!
                     </li>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Dengan rutinitas skincare yang tepat, kamu bisa menikmati
                       liburan tanpa khawatir tentang kesehatan kulitmu.
                       Sunscreen melindungi kulit dari bahaya sinar matahari,
                       double cleansing menjaga kebersihan kulit, dan hidrasi
                       menjaga kulit tetap sehat serta bercahaya.
                     </p>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Jadikan momen liburanmu bebas khawatir dengan kulit
                       glowing bersama produk andalan dari Dear Me Beauty.
                       Liburan bukan hanya untuk tubuh dan pikiran, tapi juga
                       untuk merawat kecantikan kulitmu.
                     </p>
                   </ol>
-                  <p className="font-bold mt-8">
+                  <p className="font-bold my-2 md:my-4 text-[10px] md:text-base mt-2 md:mt-8 z-[999px] mb-12 md:mb-0">
                     Enjoy your holiday with glowing skin! 🌟
                   </p>
                 </div>
@@ -312,7 +331,7 @@ const Blog = () => {
                     <p>12 Jan 2023</p>
                   </div> */}
                   {/* Content */}
-                  <h3 className="font-bold text-2xl mt-4">
+                  <h3 className="font-bold my-2 md:my-4 text-[10px] md:text-2xl mt-4">
                     Dear Me Beauty Meluncurkan Program “Beauty for Earth” untuk
                     Kecantikan yang Peduli Lingkungan
                   </h3>
@@ -321,9 +340,9 @@ const Blog = () => {
                     alt="Press Release Image"
                     width={500}
                     height={200}
-                    className="w-full object-cover h-[600px] mt-4"
+                    className="w-full object-cover h-[200px] md:h-[600px] mt-4"
                   />
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     <b>[Jakarta, 17 November 2024]</b> – Dear Me Beauty, merek
                     kecantikan lokal yang dikenal dengan inovasi dan kualitas
                     produknya, kembali menunjukkan komitmen terhadap
@@ -332,14 +351,14 @@ const Blog = () => {
                     pelestarian lingkungan melalui kampanye reboisasi yang
                     melibatkan pelanggan secara langsung.
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     Melalui “Beauty for Earth”, Dear Me Beauty berkomitmen untuk
                     menanam satu pohon untuk setiap pembelian produk edisi
                     khusus ramah lingkungan. Kampanye ini bertujuan mendukung
                     konservasi hutan di Indonesia sekaligus menginspirasi
                     konsumen untuk turut berkontribusi pada pelestarian alam.
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base">
                     “Sebagai brand kecantikan yang peduli dengan keberlanjutan,
                     kami percaya bahwa kecantikan sejati tidak hanya berasal
                     dari penampilan luar, tetapi juga dari tindakan nyata untuk
@@ -348,54 +367,54 @@ const Blog = () => {
                     semua pelanggan kami menjadi bagian dari gerakan positif
                     ini.”
                   </p>
-                  <p className="my-4 text-justify font-bold">
+                  <p className="text-justify  font-bold my-2 md:my-4 text-[10px] md:text-base">
                     Inisiatif Utama Program “Beauty for Earth”
                   </p>
                   <ol className="list-decimal ml-8">
-                    <li className="font-bold">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                       Produk Edisi Khusus Ramah Lingkungan:
                     </li>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Dear Me Beauty meluncurkan koleksi Face Palette dengan
                       kemasan yang 100% dapat didaur ulang. Koleksi ini
                       mengusung tema alam, menampilkan desain eksklusif hasil
                       kolaborasi dengan seniman lokal yang terinspirasi dari
                       keindahan hutan Indonesia.
                     </p>
-                    <li className="font-bold">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                       Penanaman Pohon untuk Setiap Pembelian:
                     </li>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Setiap pembelian produk edisi khusus ini akan secara
                       otomatis mendukung program reboisasi yang dilakukan
                       bekerja sama dengan Treehome Indonesia. Pelanggan juga
                       akan menerima sertifikat digital sebagai tanda kontribusi
                       mereka dalam gerakan ini.
                     </p>
-                    <li className="font-bold">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                       Acara Penanaman Pohon Bersama:
                     </li>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Dear Me Beauty mengundang pelanggan, komunitas, dan
                       influencer untuk ikut serta dalam acara penanaman pohon
                       yang akan diselenggarakan pada 3 Maret 2025, Gunung Lawu,
                       Magetan, Jawa Timur. Acara ini dirancang untuk mempererat
                       hubungan antara pelanggan dan alam.
                     </p>
-                    <li className="font-bold">
+                    <li className="font-bold my-2 md:my-4 text-[10px] md:text-base">
                       Edukasi Digital Tentang Lingkungan :
                     </li>
-                    <p className="text-justify my-4">
+                    <p className="text-justify my-2 md:my-4 text-[8px] md:text-base">
                       Melalui media sosial dan blog, Dear Me Beauty akan
                       membagikan konten edukatif tentang pentingnya menjaga
                       lingkungan, langkah kecil yang dapat dilakukan konsumen,
                       dan kisah di balik upaya reboisasi ini.
                     </p>
                   </ol>
-                  <p className="my-4 font-bold">
+                  <p className=" font-bold my-2 md:my-4 text-[10px] md:text-base">
                     Bergabunglah dalam Gerakan Ini!
                   </p>
-                  <p className="my-4 text-justify">
+                  <p className="my-4 text-justify text-[8px] md:text-base mb-12 md:mb-0">
                     Dengan program <i>“Beauty for Earth”</i>, Dear Me Beauty
                     tidak hanya ingin mempercantik para pelanggannya, tetapi
                     juga planet yang kita cintai bersama. Kami percaya bahwa
@@ -406,14 +425,78 @@ const Blog = () => {
               </div>
             )}
             {activeMenu === "carousel" && (
-              <div className="grid grid-cols-3 gap-4 mt-8">
+              <div className="grid grid-cols-3 gap-2 md:gap-4 mt-2 md:mt-8 mb-12 md:mb-4">
+                {/* Video */}
                 <Link
-                  href={"https://www.instagram.com/p/DDwJsJkSjED/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  href={"https://www.instagram.com/p/DD0imINslpR/"}
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <FaVideo
+                      size={32}
+                      color="#FF47B4"
+                      className="w-[12px] md:w-full"
+                    />
+                  </div>
+                  <Image
+                    src={"/reels/1.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                  <h3></h3>
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DD0ibW9sBde/"}
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <FaVideo
+                      size={32}
+                      color="#FF47B4"
+                      className="w-[12px] md:w-full"
+                    />
+                  </div>
+                  <Image
+                    src={"/reels/2.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                <Link
+                  href={"https://www.instagram.com/p/DD0jc91s4bu/"}
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <FaVideo
+                      size={32}
+                      color="#FF47B4"
+                      className="w-[12px] md:w-full"
+                    />
+                  </div>
+                  <Image
+                    src={"/reels/3.jpg"}
+                    alt="carousel"
+                    width={500}
+                    height={500}
+                  />
+                </Link>
+                {/* Carousel */}
+                <Link
+                  href={"https://www.instagram.com/p/DDwJsJkSjED/?img_index=1"}
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
+                  target="_blank"
+                >
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel1.jpg"}
@@ -424,11 +507,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwJ7Y-Sgza/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel2.jpg"}
@@ -439,11 +526,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwJ93sStR-/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel3.jpg"}
@@ -454,11 +545,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwKBgRSWqo/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel4.jpg"}
@@ -469,11 +564,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwKEkMSodg/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel5.jpg"}
@@ -484,11 +583,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwKHpESYGj/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel6.jpg"}
@@ -499,11 +602,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwKKoNSZSI/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel7.jpg"}
@@ -514,11 +621,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwKNSbSJtE/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel8.jpg"}
@@ -529,11 +640,15 @@ const Blog = () => {
                 </Link>
                 <Link
                   href={"https://www.instagram.com/p/DDwKQB7Stwz/?img_index=1"}
-                  className="rounded-xl bg-softpink p-4 relative hover:-translate-y-5 duration-500"
+                  className="rounded-xl bg-softpink p-2 md:p-4 relative hover:-translate-y-5 duration-500"
                   target="_blank"
                 >
-                  <div className="absolute top-6 right-6">
-                    <BiSolidCarousel size={32} color="#fff" />
+                  <div className="absolute right-3 top-1 md:top-6 md:right-6">
+                    <BiSolidCarousel
+                      size={32}
+                      color="#fff"
+                      className="w-[12px] md:w-full"
+                    />
                   </div>
                   <Image
                     src={"/carousel/carousel9.jpg"}
@@ -546,10 +661,10 @@ const Blog = () => {
             )}
           </div>
           {/* Sticky Product */}
-          <div className="w-[30%] h-full flex flex-col items-center mt-4 sticky top-0">
+          <div className="w-[30%] h-full hidden md:flex flex-col items-center mt-4 sticky top-28 translate-y-16">
             {/* Social Media */}
             <div className="flex justify-center items-center gap-4">
-              <Link href={"https://www.instagram.com/dearmebeauty/"}>
+              <Link href={"https://www.instagram.com/uascreativewriting/"}>
                 <FaInstagram size={40} color="#FF79C8" />
               </Link>
               <Link href={"https://www.tiktok.com/@dearmebeauty"}>

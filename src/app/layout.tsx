@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className={`${monserrat.className} antialiased overflow-x-hidden`}>
         <Navbar />
         <Circle className="absolute -top-44 -left-12 opacity-30 blur-xl w-[350px] h-[350px]" />
-        <div className="min-h-screen overflow-auto">{children}</div>
+        <div>{children}</div>
         <Footer />
       </body>
     </html>
